@@ -8,9 +8,9 @@
     <string name="action_info">Info</string>
     <string name="hint_search">Procurar por Hotel</string>
 
-    <string name="about_title">Dominando o Android</string>
-    <string name="about_message">Desenvolvido por nglauber</string>
-    <string name="about_button_site">Site</string>
+    <string name="about_title">Hotel</string>
+    <string name="about_message">Desenvolvido por Marcelo Mello</string>
+    <string name="about_button_site">Ok</string>
 
     <string name="form_label_name">Nome</string>
     <string name="form_label_address">Endereço</string>
@@ -31,4 +31,5 @@
     <string name="share_text">Me hospedei no %1$s e o classifiquei em %2$.1f estrelas</string>
 
     <string name="action_edit">Editar</string>
+    <string name="save">Salvar</string>
 </resources>

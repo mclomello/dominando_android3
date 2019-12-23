@@ -3,7 +3,7 @@
           package="dominando.android.hotel">
 
     <application
-            android:name=".HotelApp"
+            android:name="br.com.msbm.hotel.HotelApp"
             android:allowBackup="true"
             android:icon="@mipmap/ic_launcher"
             android:label="@string/app_name"
@@ -11,7 +11,7 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
         <activity
-                android:name=".common.HotelActivity"
+                android:name="dominando.android.hotel.br.com.msbm.hotel.ui.hotel.HotelActivity"
                 android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -20,8 +20,8 @@
             </intent-filter>
         </activity>
         <activity
-                android:name=".details.HotelDetailsActivity"
-                android:parentActivityName=".common.HotelActivity"/>
+                android:name="dominando.android.hotel.br.com.msbm.hotel.ui.hotel.detail.HotelDetailActivity"
+                android:parentActivityName="dominando.android.hotel.br.com.msbm.hotel.ui.hotel.HotelActivity"/>
     </application>
 
 </manifest>
