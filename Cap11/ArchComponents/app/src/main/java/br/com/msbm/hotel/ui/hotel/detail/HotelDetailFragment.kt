@@ -37,10 +37,11 @@ class HotelDetailFragment : Fragment() {
             if (hotel != null) {
                 showHotelDetails(hotel)
             } else {
-                activity?.supportFragmentManager
-                    ?.beginTransaction()
-                    ?.remove(this)
-                    ?.commit()
+                activity?.
+                    supportFragmentManager?.
+                    beginTransaction()?.
+                    remove(this)?.
+                    commit()
 
                 errorHotelNotFound()
             }

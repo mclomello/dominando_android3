@@ -23,7 +23,7 @@ class HotelActivity : AppCompatActivity(),
     private val viewModel: HotelListViewModel by viewModel()
     private var searchView: SearchView? = null
 
-    private val listFragment: HotelListFragment by lazy {
+    private val hotelListFragment: HotelListFragment by lazy {
         supportFragmentManager.findFragmentById(R.id.fragmentList) as HotelListFragment
     }
 
@@ -32,7 +32,7 @@ class HotelActivity : AppCompatActivity(),
         setContentView(R.layout.activity_hotel)
 
         fabAdd.setOnClickListener {
-            listFragment.hideDeleteMode()
+            hotelListFragment.hideDeleteMode()
             HotelFormFragment.newInstance().open(supportFragmentManager)
         }
     }
@@ -73,20 +73,21 @@ class HotelActivity : AppCompatActivity(),
             R.id.action_info ->
                 AboutDialogFragment().show(supportFragmentManager, "sobre")
         }
+
         return super.onOptionsItemSelected(item)
     }
 
     override fun onQueryTextSubmit(query: String?) = true
 
     override fun onQueryTextChange(newText: String?): Boolean {
-        listFragment.search(newText ?: "")
+        hotelListFragment.search(newText ?: "")
         return true
     }
 
     override fun onMenuItemActionExpand(item: MenuItem?) = true // para expandir a view
 
     override fun onMenuItemActionCollapse(item: MenuItem?): Boolean {
-        listFragment.search()
+        hotelListFragment.search()
         return true
     }
 
@@ -101,11 +102,11 @@ class HotelActivity : AppCompatActivity(),
     private fun showDetailsFragment(hotelId: Long) {
         searchView?.setOnQueryTextListener(null)
 
-        val fragment = HotelDetailFragment.newInstance(hotelId)
+        val hotelDetailFragment = HotelDetailFragment.newInstance(hotelId)
         supportFragmentManager
             .beginTransaction()
             .replace(
-                R.id.details, fragment,
+                R.id.details, hotelDetailFragment,
                 HotelDetailFragment.TAG_DETAILS
             )
             .commit()

@@ -32,4 +32,5 @@
 
     <string name="action_edit">Editar</string>
     <string name="save">Salvar</string>
+    <string name="about_url">http://developer.android.com</string>
 </resources>

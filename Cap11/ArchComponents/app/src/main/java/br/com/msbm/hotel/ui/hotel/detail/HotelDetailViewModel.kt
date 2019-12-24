@@ -5,9 +5,7 @@ import androidx.lifecycle.ViewModel
 import br.com.msbm.hotel.model.Hotel
 import br.com.msbm.hotel.repository.HotelRepository
 
-class HotelDetailViewModel(
-    private val repository: HotelRepository
-) : ViewModel() {
+class HotelDetailViewModel(private val repository: HotelRepository) : ViewModel() {
     fun loadHotelDetails(id: Long): LiveData<Hotel> {
         return repository.hotelById(id)
     }
